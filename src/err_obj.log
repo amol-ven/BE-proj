@@ -1,0 +1,29 @@
+In file included from Kernel_headers/KernelIncludes.h:2:0,
+                 from application.c:6:
+Kernel_headers/uart.c: In function 'UART0_IRQHandler':
+Kernel_headers/uart.c:119:2: error: expected ';' before 'if'
+In file included from Kernel_headers/KernelIncludes.h:3:0,
+                 from application.c:6:
+Kernel_headers/KernelInit.c: In function 'A_taskCreate':
+Kernel_headers/KernelInit.c:24:44: warning: assignment makes integer from pointer without a cast [enabled by default]
+Kernel_headers/KernelInit.c: In function 'A_taskUART':
+Kernel_headers/KernelInit.c:74:5: warning: passing argument 2 of 'UARTSend' discards 'volatile' qualifier from pointer target type [enabled by default]
+Kernel_headers/uart.c:311:6: note: expected 'uint8_t *' but argument is of type 'volatile uint8_t *'
+Kernel_headers/KernelInit.c:76:5: warning: passing argument 2 of 'UARTSend' discards 'volatile' qualifier from pointer target type [enabled by default]
+Kernel_headers/uart.c:311:6: note: expected 'uint8_t *' but argument is of type 'volatile uint8_t *'
+Kernel_headers/KernelInit.c:85:5: warning: passing argument 2 of 'UARTSend' discards 'volatile' qualifier from pointer target type [enabled by default]
+Kernel_headers/uart.c:311:6: note: expected 'uint8_t *' but argument is of type 'volatile uint8_t *'
+In file included from Kernel_headers/KernelIncludes.h:4:0,
+                 from application.c:6:
+Kernel_headers/ContextSwitcher.c: In function 'PendSV_Handler':
+Kernel_headers/ContextSwitcher.c:31:35: warning: assignment makes integer from pointer without a cast [enabled by default]
+Kernel_headers/ContextSwitcher.c:100:10: warning: assignment makes pointer from integer without a cast [enabled by default]
+In file included from Kernel_headers/KernelIncludes.h:6:0,
+                 from application.c:6:
+Kernel_headers/String.c: At top level:
+Kernel_headers/String.c:1:6: warning: conflicting types for 'copystring' [enabled by default]
+Kernel_headers/KernelInit.c:53:2: note: previous implicit declaration of 'copystring' was here
+In file included from Kernel_headers/KernelIncludes.h:13:0,
+                 from application.c:6:
+Kernel_headers/Scheduler.c:24:6: warning: conflicting types for 'A_scheduler' [enabled by default]
+Kernel_headers/ContextSwitcher.c:39:2: note: previous implicit declaration of 'A_scheduler' was here

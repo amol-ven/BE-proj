@@ -1,0 +1,465 @@
+Archive member included because of file (symbol)
+
+/home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-errno.o)
+                              syscalls.o (__errno)
+/home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
+                              /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-errno.o) (_impure_ptr)
+/home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memset.o)
+                              syscalls.o (memset)
+
+Allocating common symbols
+Common symbol       size              file
+
+mybox               0xd0              application.o
+A_SYSCLK            0x4               application.o
+I2CReadLength       0x4               application.o
+A_customUartSend    0x1               application.o
+I2CSlaveBuffer      0x20              application.o
+taskCLID            0x2               application.o
+taskstack4          0x320             application.o
+A_taskSleeping      0x1c              application.o
+UART1Buffer         0x40              application.o
+A_systickReloadValue
+                    0x1c              application.o
+A_SYSTEM_ERROR_CODE
+                    0x4               application.o
+UART0Buffer         0x40              application.o
+A_taskAlarm         0x1c              application.o
+A_taskUARTstack     0x190             application.o
+taskstack1          0x320             application.o
+UART1Status         0x4               application.o
+A_uartSendIndex     0x4               application.o
+I2CMode             0x4               application.o
+uartmut             0x1               application.o
+A_taskStaskPointer  0x1c              application.o
+I2CMasterBuffer     0x20              application.o
+A_receivedCommand   0x40              application.o
+I2CCmd              0x4               application.o
+A_taskNames         0x8c              application.o
+taskstack0          0x320             application.o
+I2CWriteLength      0x4               application.o
+A_taskInitialTOS    0x1c              application.o
+taskstackidle       0x190             application.o
+A_taskFirstRun      0x1c              application.o
+taskstack3          0x320             application.o
+UART0Status         0x4               application.o
+A_taskFunctionPointer
+                    0x1c              application.o
+A_taskEnable        0x7               application.o
+MSP_copy            0x4               application.o
+taskstack2          0x320             application.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+IROM             0x00000000         0x00080000         xr
+IRAM0            0x10000000         0x00008000         xrw
+IRAM1            0x2007c000         0x00004000         xrw
+IRAM2            0x20080000         0x00004000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD startup_LPC17xx.o
+LOAD core_cm3.o
+LOAD system_LPC17xx.o
+LOAD syscalls.o
+LOAD application.o
+START GROUP
+LOAD /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/libgcc.a
+LOAD /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a
+END GROUP
+
+.text           0x00000000     0x3054
+ *(.isr_vector .isr_vector.*)
+ .isr_vector    0x00000000       0xc4 startup_LPC17xx.o
+                0x00000000                g_pfnVectors
+ *(.text .text.*)
+ .text          0x000000c4       0xf8 startup_LPC17xx.o
+                0x000000c4                Reset_Handler
+                0x000001b4                TIMER2_IRQHandler
+                0x000001b4                DebugMon_Handler
+                0x000001b4                RIT_IRQHandler
+                0x000001b4                PWM1_IRQHandler
+                0x000001b4                I2C1_IRQHandler
+                0x000001b4                EINT2_IRQHandler
+                0x000001b4                UART1_IRQHandler
+                0x000001b4                EINT3_IRQHandler
+                0x000001b4                TIMER3_IRQHandler
+                0x000001b4                UsageFault_Handler
+                0x000001b4                PLL0_IRQHandler
+                0x000001b4                CAN_IRQHandler
+                0x000001b4                PLL1_IRQHandler
+                0x000001b4                SSP0_IRQHandler
+                0x000001b4                I2S_IRQHandler
+                0x000001b4                I2C2_IRQHandler
+                0x000001b4                RTC_IRQHandler
+                0x000001b4                TIMER0_IRQHandler
+                0x000001b4                SPI_IRQHandler
+                0x000001b4                EINT1_IRQHandler
+                0x000001b4                TIMER1_IRQHandler
+                0x000001b4                UART2_IRQHandler
+                0x000001b4                Default_Handler
+                0x000001b4                ADC_IRQHandler
+                0x000001b4                SSP1_IRQHandler
+                0x000001b4                USB_IRQHandler
+                0x000001b4                BOD_IRQHandler
+                0x000001b4                MemManage_Handler
+                0x000001b4                WDT_IRQHandler
+                0x000001b4                SVC_Handler
+                0x000001b4                QEI_IRQHandler
+                0x000001b4                EINT0_IRQHandler
+                0x000001b4                DMA_IRQHandler
+                0x000001b4                BusFault_Handler
+                0x000001b4                MCPWM_IRQHandler
+                0x000001b4                ENET_IRQHandler
+ .text          0x000001bc      0x28c core_cm3.o
+                0x000001bc                __get_PSP
+                0x000001cc                __set_PSP
+                0x000001d4                __get_MSP
+                0x000001e4                __set_MSP
+                0x000001ec                __get_BASEPRI
+                0x0000020c                __set_BASEPRI
+                0x00000224                __get_PRIMASK
+                0x00000244                __set_PRIMASK
+                0x0000025c                __get_FAULTMASK
+                0x0000027c                __set_FAULTMASK
+                0x00000294                __get_CONTROL
+                0x000002b4                __set_CONTROL
+                0x000002cc                __REV
+                0x000002f0                __REV16
+                0x00000314                __REVSH
+                0x00000338                __RBIT
+                0x0000035c                __LDREXB
+                0x00000380                __LDREXH
+                0x000003a4                __LDREXW
+                0x000003c8                __STREXB
+                0x000003f4                __STREXH
+                0x00000420                __STREXW
+ .text          0x00000448      0x438 system_LPC17xx.o
+                0x00000448                SystemCoreClockUpdate
+                0x00000660                SystemInit
+ .text          0x00000880      0x154 syscalls.o
+                0x00000880                _read_r
+                0x000008a8                _lseek_r
+                0x000008c8                _write_r
+                0x000008e4                _close_r
+                0x00000900                _sbrk_r
+                0x00000980                _fstat_r
+                0x000009b8                _isatty_r
+ .text          0x000009d4     0x255c application.o
+                0x00000a0c                delay
+                0x00000a58                wait_lcd
+                0x00000af4                lcd_command_write
+                0x00000bf0                set_lcd_port_output
+                0x00000c44                lcd_clear
+                0x00000c54                lcd_gotoxy
+                0x00000cb4                lcd_data_write
+                0x00000d98                lcd_putchar
+                0x00000db4                lcd_putstring
+                0x00000e10                lcd_backlight_on
+                0x00000e4c                lcd_backlight_off
+                0x00000e88                init_lcd
+                0x00000ec4                is_valid_ascii
+                0x00000ef8                lcd_putuint
+                0x00000f94                UART0_IRQHandler
+                0x000012d4                UART3_IRQHandler
+                0x00001450                UARTInit
+                0x00001690                UARTSend
+                0x00001740                I2C0_IRQHandler
+                0x00001b88                I2CStart
+                0x00001bec                I2CStop
+                0x00001c2c                I2CInit
+                0x00001ce4                I2CEngine
+                0x00001d44                A_init
+                0x00001e08                A_taskCreate
+                0x00001e80                A_start
+                0x00001f18                A_taskQuit
+                0x00001f84                A_setTaskName
+                0x00001fc8                A_taskIdle
+                0x00001fd0                A_taskUART
+                0x00002118                SysTick_Handler
+                0x0000216c                PendSV_Handler
+                0x00002330                copystring
+                0x00002370                comparestring
+                0x000023d0                copyNbytes
+                0x0000240c                stringlength
+                0x0000244c                getNextWord
+                0x00002550                A_mutexInit
+                0x0000256c                A_mutexAcquire
+                0x000025c0                A_mutexRelease
+                0x000025dc                A_MBoxInit
+                0x0000260c                A_sendMail
+                0x000026e4                A_checkMail
+                0x000027e8                A_taskSleep
+                0x00002844                Killtask
+                0x0000287c                Suspendtask
+                0x000028a0                Resumetask
+                0x000028d8                A_scheduler
+                0x00002bcc                _delay
+                0x00002c00                function0
+                0x00002cc0                function1
+                0x00002d28                function2
+                0x00002d78                function3
+                0x00002dc8                function4
+                0x00002e10                main
+ .text          0x00002f30        0xc /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-errno.o)
+                0x00002f30                __errno
+ .text          0x00002f3c        0x0 /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
+ .text          0x00002f3c       0x8c /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memset.o)
+                0x00002f3c                memset
+ *(.gnu.linkonce.t.*)
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.gcc_except_table)
+ *(.rodata .rodata*)
+ .rodata        0x00002fc8       0x84 application.o
+ .rodata        0x0000304c        0x4 /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
+                0x0000304c                _global_impure_ptr
+ .rodata.str1.4
+                0x00003050        0x4 /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
+ *(.gnu.linkonce.r.*)
+
+.vfp11_veneer   0x00003054        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x00003054        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x00003054        0x0
+ .iplt          0x00000000        0x0 startup_LPC17xx.o
+
+.rel.dyn        0x00003054        0x0
+ .rel.iplt      0x00000000        0x0 startup_LPC17xx.o
+
+.ctors          0x00003054        0x0
+                0x00003054                . = ALIGN (0x4)
+                0x00003054                PROVIDE (__ctors_start, .)
+ *(SORT(.ctors.*))
+ *(.ctors)
+                0x00003054                PROVIDE (__ctors_end, .)
+
+.dtors          0x00003054        0x0
+                0x00003054                . = ALIGN (0x4)
+                0x00003054                PROVIDE (__dtors_start, .)
+ *(SORT(.dtors.*))
+ *(.dtors)
+                0x00003054                PROVIDE (__dtors_end, .)
+                0x00003054                . = ALIGN (0x4)
+                0x00003054                _etext = .
+                0x00003054                _sifastcode = .
+
+.fastcode       0x10000000        0x0 load address 0x00003054
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _sfastcode = .
+ *(.glue_7t)
+ *(.glue_7)
+ *(.fastcode)
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _efastcode = .
+                0x10000000                _sidata = .
+
+.usb_ram
+ *.o(USB_RAM)
+
+.data           0x10000000       0xfc load address 0x00003054
+                0x00003054                _sidata = LOADADDR (.data)
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _sdata = .
+ *(vtable vtable.*)
+ *(.data .data.*)
+ .data          0x10000000        0x0 startup_LPC17xx.o
+ .data          0x10000000        0x0 core_cm3.o
+ .data          0x10000000        0x4 system_LPC17xx.o
+                0x10000000                SystemCoreClock
+ .data          0x10000004        0x0 syscalls.o
+ .data          0x10000004        0x4 application.o
+                0x10000004                A_currentTask
+                0x10000006                UART0TxEmpty
+                0x10000007                UART1TxEmpty
+ .data          0x10000008        0x0 /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-errno.o)
+ .data          0x10000008       0xf4 /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
+                0x10000008                _impure_ptr
+ .data          0x100000fc        0x0 /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memset.o)
+ *(.gnu.linkonce.d*)
+                0x100000fc                . = ALIGN (0x4)
+                0x100000fc                _edata = .
+
+.igot.plt       0x100000fc        0x0 load address 0x00003150
+ .igot.plt      0x00000000        0x0 startup_LPC17xx.o
+
+.bss            0x100000fc     0x164c load address 0x00003150
+                0x100000fc                . = ALIGN (0x4)
+                0x100000fc                _sbss = .
+ *(.bss .bss.*)
+ .bss           0x100000fc        0x0 startup_LPC17xx.o
+ .bss           0x100000fc        0x0 core_cm3.o
+ .bss           0x100000fc        0x0 system_LPC17xx.o
+ .bss           0x100000fc        0x4 syscalls.o
+ .bss           0x10000100       0x2c application.o
+                0x10000100                A_tasksCreatedSoFar
+                0x10000104                A_commandFlag
+                0x10000108                UART0Count
+                0x1000010c                UART1Count
+                0x10000110                A_receivedCount
+                0x10000114                I2CMasterState
+                0x10000118                I2CSlaveState
+                0x1000011c                I2CCount
+                0x10000120                RdIndex
+                0x10000124                WrIndex
+ .bss           0x1000012c        0x0 /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-errno.o)
+ .bss           0x1000012c        0x0 /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
+ .bss           0x1000012c        0x0 /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memset.o)
+ *(.gnu.linkonce.b*)
+ *(COMMON)
+ COMMON         0x1000012c     0x161c application.o
+                0x1000012c                mybox
+                0x100001fc                A_SYSCLK
+                0x10000200                I2CReadLength
+                0x10000204                A_customUartSend
+                0x10000208                I2CSlaveBuffer
+                0x10000228                taskCLID
+                0x1000022c                taskstack4
+                0x1000054c                A_taskSleeping
+                0x10000568                UART1Buffer
+                0x100005a8                A_systickReloadValue
+                0x100005c4                A_SYSTEM_ERROR_CODE
+                0x100005c8                UART0Buffer
+                0x10000608                A_taskAlarm
+                0x10000624                A_taskUARTstack
+                0x100007b4                taskstack1
+                0x10000ad4                UART1Status
+                0x10000ad8                A_uartSendIndex
+                0x10000adc                I2CMode
+                0x10000ae0                uartmut
+                0x10000ae4                A_taskStaskPointer
+                0x10000b00                I2CMasterBuffer
+                0x10000b20                A_receivedCommand
+                0x10000b60                I2CCmd
+                0x10000b64                A_taskNames
+                0x10000bf0                taskstack0
+                0x10000f10                I2CWriteLength
+                0x10000f14                A_taskInitialTOS
+                0x10000f30                taskstackidle
+                0x100010c0                A_taskFirstRun
+                0x100010dc                taskstack3
+                0x100013fc                UART0Status
+                0x10001400                A_taskFunctionPointer
+                0x1000141c                A_taskEnable
+                0x10001424                MSP_copy
+                0x10001428                taskstack2
+                0x10001748                . = ALIGN (0x4)
+                0x10001748                _ebss = .
+
+.stackarea      0x10001748      0x800 load address 0x00003150
+                0x10001748                . = ALIGN (0x8)
+                0x10001748                _sstack = .
+ *(.stackarea .stackarea.*)
+ .stackarea     0x10001748      0x800 startup_LPC17xx.o
+                0x10001748                pulStack
+                0x10001f48                . = ALIGN (0x8)
+                0x10001f48                _estack = .
+                0x10001f48                . = ALIGN (0x4)
+                0x10001f48                _end = .
+                0x10001f48                PROVIDE (end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame    0x00000000       0x4c
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x20 /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-errno.o)
+ .debug_frame   0x00000020       0x2c /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memset.o)
+
+.comment        0x00000000       0x30
+ .comment       0x00000000       0x30 startup_LPC17xx.o
+                                 0x31 (size before relaxing)
+ .comment       0x00000000       0x31 core_cm3.o
+ .comment       0x00000000       0x31 system_LPC17xx.o
+ .comment       0x00000000       0x31 syscalls.o
+ .comment       0x00000000       0x31 application.o
+
+.ARM.attributes
+                0x00000000       0x33
+ .ARM.attributes
+                0x00000000       0x33 startup_LPC17xx.o
+ .ARM.attributes
+                0x00000033       0x33 core_cm3.o
+ .ARM.attributes
+                0x00000066       0x33 system_LPC17xx.o
+ .ARM.attributes
+                0x00000099       0x33 syscalls.o
+ .ARM.attributes
+                0x000000cc       0x33 application.o
+ .ARM.attributes
+                0x000000ff       0x2b /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-errno.o)
+ .ARM.attributes
+                0x0000012a       0x2b /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000155       0x2b /home/amol/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memset.o)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+OUTPUT(application.elf elf32-littlearm)
